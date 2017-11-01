@@ -43,7 +43,6 @@ if (inQiyiWeb){
     global.SVGElement = document.defaultView.SVGElement
     global.Event = document.defaultView.Event
 }
-global.__bridge__ = {};
 
 // Common browser globals
 let url = '/';

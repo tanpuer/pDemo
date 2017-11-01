@@ -3,7 +3,6 @@
  */
 
 export function on_receive_patch(data) {
-    console.log("onMessage", data);
     if (data.type && data.mutations) {
         if (data.type === 'MutationRecord') {
             for (let i = 0; i < data.mutations.length; i++) {
@@ -56,6 +55,7 @@ const EVENT_OPTS = {
     //         addEventListener(m, proxyEvent, supportsPassive ? EVENT_OPTS : true);
     //     }
     // }
+    // addEventListener("oncklick", proxyEvent, true)
 
 
     let touch;

@@ -10,7 +10,6 @@ export function postPatch(patch) {
         on_receive_patch(patch)
     }else {
         __base__.postPatch("on_receive_patch(" + JSON.stringify(patch) + ");");
-
     }
 }
 

@@ -8,7 +8,8 @@ export default class button extends Component{
     constructor(props){
         super(props);
         this.state = {
-            num : 1
+            num : 1,
+            number:1,
         }
     }
 
@@ -26,15 +27,18 @@ export default class button extends Component{
 
     render(){
         return(
-            <div style={{width:200, height:2000,fontSize:100}}>
+            <div style={{width:20, height:20,fontSize:100}}>
                 <p onClick={()=>{this.setState({
                     num: this.state.num+1})}}>{this.state.num}</p>
-                <p style={{fontSize:200, color:"#ff0000", height:400}}
+                <p style={{fontSize:50, color:"#ff0000", height:100}}
                    onClick={
                        ()=>{setTimeout(()=>{this.setState({
                            num: this.state.num+1})}, 2000)}
                    }>11111</p>
-
+                <div style={{width:20, height:20,fontSize:100}}
+                     onclick={()=>this.setState({number:this.state.number++})}
+                    >{this.state.number}
+                </div>
             </div>
         )
     }
