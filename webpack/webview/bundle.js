@@ -63,12 +63,12 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 25);
+/******/ 	return __webpack_require__(__webpack_require__.s = 9);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 2:
+/***/ 1:
 /***/ (function(module, exports) {
 
 var g;
@@ -96,7 +96,7 @@ module.exports = g;
 
 /***/ }),
 
-/***/ 25:
+/***/ 9:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -114,7 +114,6 @@ exports.on_receive_patch = on_receive_patch;
  */
 
 function on_receive_patch(data) {
-    console.log("onMessage", data);
     if (data.type && data.mutations) {
         if (data.type === 'MutationRecord') {
             for (var i = 0; i < data.mutations.length; i++) {
@@ -164,6 +163,7 @@ try {
 //         addEventListener(m, proxyEvent, supportsPassive ? EVENT_OPTS : true);
 //     }
 // }
+// addEventListener("oncklick", proxyEvent, true)
 
 
 var touch = void 0;
@@ -394,7 +394,7 @@ function queueMutation(mutation) {
         doProcessMutationQueue();
     }
 }
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ })
 
